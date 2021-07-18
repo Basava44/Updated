@@ -22,11 +22,11 @@
 
         <nav class="navbar">
             <label id="check">
-                <i class="fa fa-bars" id="btn"></i>
-                <i class="fa fa-times" id="cancel"></i>
+                <i class="fa fa-bars" id="btn" onclick="myfunction()"></i>
+                <!-- <i class="fa fa-times" id="cancel"></i> -->
             </label>
             <img src="./Assets/images/logo.png" alt="">
-            <ul id="navigation">
+            <ul class="navigation" id="topnav">
                 <li><a href="#" class="active">ACOUNT SUMMARY</a></li>
                 <li><a href="#">GRANTS</a></li>
                 <li><a href="#">CONTIBUTIONS</a></li>
@@ -43,10 +43,10 @@
     <section class="main">
         <div>
         <h2>Account Overview</h2>
-        <p>The Chruch Fund</p>
+        <p>The Church Fund - A1050919</p>
         <p>Balance as of 12/12/1990</p>
         <div class="caution">
-            <p><i class="fa fa-warning" style="color: orangered; padding-right: 5px;" ></i>This is a <a href="#">Pending Contributions</a> on your Account that needs attentions.</p> <button><a href="#"><i class="fa fa-times"></a></i></button>
+            <p><i class="fa fa-warning" style="color: orangered; margin-right: 10px;" ></i>This is a <a href="#">Pending Contributions</a> on your Account that needs attentions.</p> 
         </div>
         </div>
     </section>
@@ -100,24 +100,34 @@
                             <p class="date">10/04/2019</p>
                         </div>                        
                     </div>
+                    <br>
+                    <hr style="clear: both;">
+                    <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
                 </div>
             </div>
+            
         </div>
+        <div class="accessbuttons">
+            <div class="elements">
+                <button><a href="#">CONTRIBUTION <i class="fa fa-arrow-right"></i></a></button>
+                <button><a href="#">GRANT <i class="fa fa-arrow-right"></i></a></button>
+                <button><a href="#">EXCHANGE <i class="fa fa-arrow-right"></i></a></button>
+                <button><a href="#">MANAGE YOUR ACCOUNT <i class="fa fa-arrow-right"></i></a></button>            
+            </div>
+        </div>
+
+        <div class="learn">
+            <div class="featured">
+                <p>Featured</p>
+                <p>Learn How to Value your Contributions</p>
+            </div>
+            <div class="readmore">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos doloribus, perspiciatis impedit ea dicta saepe at facere enim magnam? Corrupti sed soluta dolores reiciendis ab eos aspernatur quibusdam, laudantium earum!</p>
+                <p><button>LEARN MORE <i class="fa fa-arrow-right"></i></button></p>
+            </div>
+        </div>
+        
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <footer>
         <div class="footer" id="footer">
@@ -167,26 +177,15 @@
     </footer>
 
     <script>
-        var button = false;
-        const btn = document.getElementById("btn");
-        const navbar = document.getElementById("navigation");
-        const cancel = document.getElementById("cancel");
-
-        btn.addEventListener("click",function(){
-            button = ~button;
-            if(button){
-                navbar.style.display = "block";
-                btn.style.display = "none";
-                cancel.style.display = "block";
+        function myfunction()
+        {
+            const x = document.getElementById("topnav");
+            if (x.className === "navigation") {
+                x.className += " responsive";
+            } else {
+                x.className = "navigation";
             }
-        })
-
-        cancel.addEventListener("click",()=>{
-            navbar.style.display = "none";
-            btn.style.display = "block";
-            cancel.style.display = "none";
-            button = ~button;
-        })
+        }
     </script>
 </body>
 </html>

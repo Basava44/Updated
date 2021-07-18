@@ -51,46 +51,40 @@ header .top .userid{
     padding: 3px;
 }
 
-.navbar{
-    background-color: var(--white-one);
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    height: auto;
-    padding: 10px;
-}
-
-.navbar img{
+nav img{
     width: 143px;
     height: 46px;
-    align-items: center;
-    padding: 0 10px;
+    margin: 10px;
 }
 
-.navbar ul{
-    display: flex;
-    align-items: center;
+.navbar{
+  background-color: var(--white-one);
+  display: flex;
+  justify-content: space-around;
 }
 
-.navbar ul li a{
-    margin: 0 10px;
-    padding: 10px;
-    color: var(--dark-blue);
-    font-weight: bold;
+nav ul li a{
+  color: var(--dark-blue);
+  font-weight: bold;
 }
 
-.navbar ul .active{
-    border-bottom:2px solid var(--dark-blue) ;
+nav .active{
+    border-bottom: 2px solid var(--dark-blue);
 }
 
-.navbar #check i{
-    color: var(--dark-blue);
-    font-size: 30px;
-    float: right;
-    line-height: 50px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+.navbar #check{
+  position: absolute;
+  display: none;
+}
+
+nav ul{
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+nav ul li{
+  margin: 10px 10px;
 }
 
 .greeting{
@@ -102,10 +96,11 @@ header .top .userid{
 section.main{
     background-color: white;
     height: auto;
+    width: 100%;
 }
 
 section.main div:first-child{
-    padding: 20px 20%;
+    padding: 20px 10%;
 }
 
 section > div > div > p > a{
@@ -116,56 +111,66 @@ section > div > div > p > a{
 section.main h2{
     font-size: 30px;
     color: var(--dark-blue);
-    padding: 20px 0;
+    font-weight: lighter;
+    margin: 15px 0;
 }
 
 section.main div p:nth-child(2){
     color: var(--dark-blue);
     font-weight: bold;
-    padding: 5px 0;
-    font-size: 20px;
+    font-size: 15px;
+    line-height: 10px;
 }
 
 section.main div p:nth-child(3){
     padding: 5px 0;
+    color: var(--light-gray-blue);
+    font-size: 16px;
 }
 
 section.main div.caution{
-    padding: 15px 0;
+    margin: 15px 0;
+    padding: 20px 0;
     height: auto;
+    width: 100%;
     background-color: var(--background);
     display: flex;
     align-items: center;
     border-left: 4px solid orangered;
 }
 
+.availablebalance > p:nth-child(3) > button > a{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
 section.main div.caution p{
-    padding: 0 10px;
+    margin: 0 10px;
 }
 
 section.main div.caution .fa.fa-times{
-    color:rgba(87, 80, 80, 0.404);
-    font-size: 1.5em;
-    opacity: 0.8;
-    
+    color:rgba(87, 80, 80, 0.404); 
+    align-items: center;
+    position: absolute;
+    right: 0;
 }
 
 section.main div.caution button{
     text-decoration: none;
     border: none;
-    position: relative;
-    left: 35%;
+    font-size: 20px;
 }
 
-section .container{
-    padding: 0;
-}
+/* amount section */
 
 .availablebalance, .currentbalance{
     background-color: var(--white-one);
     margin: 10px;
-    padding: 20px;
+    padding: 20px 30px;
+    width: 350px;
+    height: 160px;
 }
+
 
 .balance p{
     margin: 5px 0;
@@ -189,7 +194,7 @@ section .container{
 }
 
 button a{
-    color: var(--dark-blue);
+    color: var(--deep-tortoise)
 }
 
 .balancequery{
@@ -198,24 +203,33 @@ button a{
     margin: 10px;
 }
 
-.container{
+
+section .container{
     display:flex;
-    justify-content: center
+    justify-content: center;
+    height: auto;
+    width: auto;
+    margin: 10px auto;
 }
 
 .container .balancequery .headings{
     display: flex;
+    overflow-x: auto;
+}
+
+::-webkit-scrollbar{
+    background-color: transparent;
 }
 
 .container .balancequery .headings p{
-    padding: 10px 10px;
-    text-align: center;
+    padding: 10px 20px;
+    align-items: center;
     background-color: var(--light-gray-blue);
     color: #505050;
     font-weight: bold;
     border: 1px solid #d9d9d9;
     border-bottom: none;
-    
+    width: auto;    
 }
 
 .container .balancequery .headings #active{
@@ -245,14 +259,90 @@ button a{
 }
 
 .container .balancequery .features .data p{
-    margin: 10px;
+    margin: 6px;
+}
+
+.container .balancequery .features .data{
+    width: inherit;
+    max-width: inherit;
+    margin-left: 5%;
 }
 
 .container .balancequery .features .data .items{
-    float:left;
+    margin: 0 20px;
+    float: left;
+}
+
+div.balancequery > div.features > div > div:nth-child(4){
+    clear: both;
+} 
+
+hr{
+    margin-left: 20px;
+}
+
+.balancequery .activity a{
+    color: var(--deep-tortoise);
+    margin: 20px 20px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    clear: both;
+    display: block;
 }
 
 
+.accessbuttons .elements{
+    display: flex;
+    padding: 10px 10%;
+    justify-content: space-between;
+}
+
+.accessbuttons .elements button{
+    background-color: var(--deep-tortoise);
+    border: none;
+    margin: 5px;
+    height: 40px;
+    width: 250px;
+
+}
+
+.accessbuttons .elements button a{
+    color: var(--white-one);
+    text-decoration: none;
+}
+
+.learn{
+    padding: 10px;
+    background-color: var(--white-one);
+    display: flex;
+    margin: 20px 10%;
+}
+
+.learn p{
+    margin: 10px;
+}
+
+.learn p:nth-child(1){
+    color: var(--light-gray-blue);
+}
+
+.learn p:nth-child(2){
+    color: var(--deep-tortoise);
+    font-size: 20px;
+}
+
+.learn div.readmore{
+    margin-top: 10px;
+    width: 80%;
+}
+
+.learn button{
+    border: none;
+    color: var(--deep-tortoise);
+    font-weight: bold;
+    background-color: transparent
+}
 
 
 
@@ -263,6 +353,7 @@ button a{
 
 
 footer{
+    margin-top: 20px;
     background-color: var(--dark-blue);
 }
 
@@ -326,32 +417,14 @@ footer{
     color: var(--white-one);
 }
 
-body > section:nth-child(3) > div > div.balancequery > div.features > div > div:nth-child(4){
-    clear: both;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 680px){
+/* @media only screen and (max-width: 880px){
     .navbar ul li{
         padding: 0;
         margin: 0 5px;
         font-size: 0.9em;
     }
 
-}
+} */
 
 
 @media only screen and (max-width: 680px)  {
@@ -370,40 +443,34 @@ body > section:nth-child(3) > div > div.balancequery > div.features > div > div:
         display: none;
     }
 
-    .navbar{
+    .navigation{
+        display: none;
+      }
+    
+      .navbar{
         display: block;
-        width: 100%;
-    }
-
-    .navbar ul{
-        position:relative;
+      }
+    
+      .navbar #check{
+        display: block;
+        font-size: 30px;
+        right: 20px;
+        top: 65px;
+        color: var(--dark-blue);
+      }
+    
+      .navigation.responsive{
+        display: flex;
+        flex-direction: column;
+        line-height: 20px;
         background-color: var(--dark-blue);
-        right: 1px;
-        margin-top: 10px;
-        padding: 0;
-        width: 100%;   
-        display: none;   
-    }
-
-    .navbar ul li{
-        text-align: center;
-    }
-
-    .navbar > ul > li > a{
-        line-height: 4;
         color: var(--white-one);
-    }
-
-    .navbar ul .active{
-        border: none;
-    }
-
-    .navbar #check #btn{
-        display: block;
-    }
+      }    
 
     .navbar ul li a{
         transition: 0.3s;
+        color: var(--white-one);
+        line-height: 40px;
     }
 
     .navbar ul li a:hover{
@@ -419,18 +486,62 @@ body > section:nth-child(3) > div > div.balancequery > div.features > div > div:
     }
 
     section.main div.caution button{
-        left: 0;
-        margin-right: 15px;
+        right: 10px;
     }
 
-    .container{
+    section.main div.caution{
+        border-top: 6px solid orangered;
+        border-left: none;
+    }
+
+    section .container{
         display: block;
     }
     
+    section .balancequery{
+        height: 450px;
+    }
+
+
+    hr{
+        clear: both;
+    }
+
+    .balancequery .activity a{
+        text-align: center;
+    }
+
     body > section:nth-child(3) > div > div.balancequery > div.features > div > div:nth-child(4){
         clear: none;
     }
 
+    .availablebalance, .currentbalance{
+        padding: 20px;
+        width: 95%;
+    }
+
+    .accessbuttons .elements{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        margin-bottom: 10px;
+    }
+
+    .accessbuttons .elements button{
+        width: 94%
+    }
+    
+    .learn{
+        background-color: var(--white-one);
+        margin: 0 10px;
+        display: block;
+    }
+
+    .learn div.readmore{
+        width: 100%;
+    }
+
+    
 
 
 
@@ -438,21 +549,12 @@ body > section:nth-child(3) > div > div.balancequery > div.features > div > div:
 
 
 
-
-
-
-
-
-
-
-
-
-
+    .footer{
+        clear: both;
+    }
 
     .footer .items{
-        clear: both;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
