@@ -30,7 +30,11 @@ body{
     width: 100%; 
     justify-content: flex-end;
     position: relative;
-    right: 10%;
+    right: 90px;
+}
+
+.top .assistance{
+    margin: 10px;
 }
 
 .top p{
@@ -47,8 +51,11 @@ header .top i{
 header .top .userid{
     color: var(--dark-blue);
     background-color: var(--white-one);
+    font-weight: bold;
     border-radius: 2rem;
-    padding: 3px;
+    letter-spacing: 0.5px;
+    color: var(--dark-blue);
+    margin: 10px;
 }
 
 nav img{
@@ -65,17 +72,23 @@ nav img{
 
 nav ul li a{
   color: var(--dark-blue);
+  padding: 22px 0;
   font-weight: bold;
+  transition: 0.3s;
+}
+
+nav ul li a:hover{
+    border-bottom: 4px solid var(--dark-blue);
 }
 
 nav .active{
-    border-bottom: 2px solid var(--dark-blue);
+    border-bottom: 4px solid var(--dark-blue);
 }
 
 .navbar #check{
   position: absolute;
   display: none;
-}
+}   
 
 nav ul{
   display: flex;
@@ -89,8 +102,18 @@ nav ul li{
 
 .greeting{
     width: 100%;
-    padding: 20px 40px; 
+    padding: 15px 0;
     color: #505050;
+    font-size: 14px;
+}
+
+.greeting a{
+    color: var(--deep-tortoise);
+    text-decoration: underline;
+}
+
+blockquote{
+    margin: 0 0 0 110px;
 }
 
 section.main{
@@ -100,7 +123,8 @@ section.main{
 }
 
 section.main div:first-child{
-    padding: 20px 10%;
+    padding: 20px 110px;
+    letter-spacing: 0.5px;
 }
 
 section > div > div > p > a{
@@ -125,52 +149,44 @@ section.main div p:nth-child(2){
 section.main div p:nth-child(3){
     padding: 5px 0;
     color: var(--light-gray-blue);
-    font-size: 16px;
+    font-size: 10px;
 }
 
 section.main div.caution{
     margin: 15px 0;
-    padding: 20px 0;
-    height: auto;
+    padding: 10px 0;
     width: 100%;
     background-color: var(--background);
     display: flex;
+    justify-content: space-between;
     align-items: center;
     border-left: 4px solid orangered;
 }
 
-.availablebalance > p:nth-child(3) > button > a{
-    margin-top: 20px;
-    font-size: 15px;
+section.main div.caution .fa.fa-close{
+    margin-right: 10px;
 }
 
-section.main div.caution p{
-    margin: 0 10px;
+.fa.fa-info{
+    font-size: 10px;
+    padding: 2px 5px;
+    display: inline;
+    border-radius: 50%;
+    color: var(--white-one);
+    background-color: var(--deep-tortoise);
 }
-
-section.main div.caution .fa.fa-times{
-    color:rgba(87, 80, 80, 0.404); 
-    align-items: center;
-    position: absolute;
-    right: 0;
-}
-
-section.main div.caution button{
-    text-decoration: none;
-    border: none;
-    font-size: 20px;
-}
-
-/* amount section */
 
 .availablebalance, .currentbalance{
     background-color: var(--white-one);
     margin: 10px;
-    padding: 20px 30px;
-    width: 350px;
-    height: 160px;
+    padding: 30px;
+    width: 373px;
+    height: 172px;
 }
 
+.balance{
+
+}
 
 .balance p{
     margin: 5px 0;
@@ -179,10 +195,13 @@ section.main div.caution button{
 .balance .amount{
     font-size: 35px;
     color: var(--moss-green);
+    margin-top: 10px;
 }
 
 .balance .title{
     font-size: 18px;
+    display: inline;
+    margin: 0 5px;
     color: var(--dark-blue);
 }
 
@@ -191,6 +210,7 @@ section.main div.caution button{
     background-color: transparent;
     color: var(--dark-blue);
     font-weight: bold;
+    margin-top: 30px;
 }
 
 button a{
@@ -199,17 +219,16 @@ button a{
 
 .balancequery{
     background-color: var(--white-one);
-    padding: 20px;
-    margin: 10px;
+    margin: 10px 20px;
+    height: 354px;
+    width: 736px;
 }
 
 
 section .container{
     display:flex;
     justify-content: center;
-    height: auto;
-    width: auto;
-    margin: 10px auto;
+    margin-left: 15px;
 }
 
 .container .balancequery .headings{
@@ -222,19 +241,25 @@ section .container{
 }
 
 .container .balancequery .headings p{
-    padding: 10px 20px;
+    padding: 10px 40px;
     align-items: center;
-    background-color: var(--light-gray-blue);
+    background-color: #f1f1f1;
     color: #505050;
     font-weight: bold;
     border: 1px solid #d9d9d9;
     border-bottom: none;
-    width: auto;    
+    transition: 0.3s;    
 }
 
 .container .balancequery .headings #active{
     background-color: var(--white-one);
-    border-top: 2px solid var(--dark-blue);
+    border-top: 4px solid var(--deep-tortoise);
+    color: var(--deep-tortoise);
+}
+
+.container .balancequery .headings p:hover{
+    background-color: var(--white-one);
+    border-top: 4px solid var(--deep-tortoise);
     color: var(--deep-tortoise);
 }
 
@@ -246,7 +271,7 @@ section .container{
 }
 
 .container .balancequery .info{
-    margin: 20px;
+    margin: 5px 20px;
 }
 
 .container .balancequery .features .data .title{
@@ -259,18 +284,16 @@ section .container{
 }
 
 .container .balancequery .features .data p{
-    margin: 6px;
+    margin: 9px;
 }
 
 .container .balancequery .features .data{
-    width: inherit;
-    max-width: inherit;
-    margin-left: 5%;
+    height: auto;
 }
 
 .container .balancequery .features .data .items{
-    margin: 0 20px;
-    float: left;
+    margin: 0 40px;
+    display: inline-block;
 }
 
 div.balancequery > div.features > div > div:nth-child(4){
@@ -278,53 +301,98 @@ div.balancequery > div.features > div > div:nth-child(4){
 } 
 
 hr{
-    margin-left: 20px;
+    margin: 10px;
 }
 
 .balancequery .activity a{
     color: var(--deep-tortoise);
-    margin: 20px 20px;
+    margin: 25px 20px;
     margin-bottom: 0;
     font-size: 1rem;
     font-weight: bold;
-    clear: both;
     display: block;
 }
 
+.caution .fa.fa-close{
+    color: var(--light-gray-blue);
+    font-size: 25px;
+}
+
+.learn img{
+    width: 123px;
+    height: 120px;
+    position: absolute;
+    right: 7.5%;
+    opacity: 0.5;
+    bottom: 1px;
+
+}
+
+.accessbuttons{
+    margin-left: 6px;
+}
 
 .accessbuttons .elements{
     display: flex;
-    padding: 10px 10%;
+    margin: 0 95px;
     justify-content: space-between;
+}
+
+div.accessbuttons button.active{
+    
+    background-color: var(--white-one);
+}
+
+div.accessbuttons button.active{
+    color: var(--deep-tortoise);
 }
 
 .accessbuttons .elements button{
     background-color: var(--deep-tortoise);
     border: none;
     margin: 5px;
-    height: 40px;
-    width: 250px;
-
+    height: 50px;
+    width: 270px;
+    transition: 0.3s;
 }
 
-.accessbuttons .elements button a{
+.accessbuttons .elements button:hover{
+    background-color: var(--white-one);
+    color: var(--deep-tortoise);
+    cursor: pointer;
+}
+
+.accessbuttons .elements button{
     color: var(--white-one);
     text-decoration: none;
+    font-weight: bold;
 }
 
 .learn{
     padding: 10px;
     background-color: var(--white-one);
     display: flex;
-    margin: 20px 10%;
+    margin: 10px 100px 10px 105px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa.fa-angle-right, .fa.fa-angle-left{
+    margin: 10px;
+    border-radius: 50%;
+    border: solid 0.6px #727272;
+    font-size: 15px;
+    padding: 5px 10px;
 }
 
 .learn p{
     margin: 10px;
+    z-index: 1;
 }
 
 .learn p:nth-child(1){
     color: var(--light-gray-blue);
+    margin-right: 20px;
 }
 
 .learn p:nth-child(2){
@@ -439,8 +507,16 @@ footer{
         margin: 0;
     }
 
+    header .top i{
+        margin: 10px;
+    }
     .top .assistance{
         display: none;
+    }
+
+    blockquote{
+        margin: 0 23px 0 22px;
+        font-size: 14px;
     }
 
     .navigation{
@@ -455,7 +531,7 @@ footer{
         display: block;
         font-size: 30px;
         right: 20px;
-        top: 65px;
+        top: 80px;
         color: var(--dark-blue);
       }
     
@@ -469,6 +545,7 @@ footer{
 
     .navbar ul li a{
         transition: 0.3s;
+        padding: 0;
         color: var(--white-one);
         line-height: 40px;
     }
@@ -492,6 +569,7 @@ footer{
     section.main div.caution{
         border-top: 6px solid orangered;
         border-left: none;
+        padding: 10px 1px;
     }
 
     section .container{
@@ -499,49 +577,71 @@ footer{
     }
     
     section .balancequery{
-        height: 450px;
+        width: 326px;
+        margin-left: 10px;
     }
 
-
-    hr{
-        clear: both;
+    .container .balancequery{
+        height: auto;
+        margin: 10px auto;
+        
     }
+
+    .container .balancequery .features .data .items{
+        margin: 0 20px;
+    }
+
 
     .balancequery .activity a{
         text-align: center;
-    }
-
-    body > section:nth-child(3) > div > div.balancequery > div.features > div > div:nth-child(4){
-        clear: none;
+        padding: 10px;
+        margin: 0;
     }
 
     .availablebalance, .currentbalance{
-        padding: 20px;
-        width: 95%;
+        width: 326px;
+        height: 140px;
+        align-items: center;
+        margin:15px auto;
+    }
+
+    .availablebalance button{
+        margin:0;
     }
 
     .accessbuttons .elements{
         flex-direction: column;
         align-items: center;
-        padding: 10px 0;
-        margin-bottom: 10px;
     }
 
     .accessbuttons .elements button{
-        width: 96%;
+        width: 325px;
     }
     
     .learn{
         background-color: var(--white-one);
-        margin: 0 10px;
+        margin: 10px 24px 0 29px;
         display: block;
+        height: 279px;
+        width: 326px;
     }
 
+    .fa.fa-angle-left, .fa.fa-angle-right{
+        display: none;
+    }
+
+    .learn img{
+        display: none;
+    }
     .learn div.readmore{
         width: 100%;
     }
 
-    
+    .caution .fa.fa-close{
+        right: 7%;
+        font-size: 20px;        
+    }
+
 
 
 
@@ -555,7 +655,7 @@ footer{
 
     .footer .items{
         flex-direction: column;
-        align-items: center;
+        align-items: left
     }
 
     .footer .contact{
@@ -567,11 +667,12 @@ footer{
     }
 
     .footer .items .secondItem{
-        margin: 30px 0 ;
+        margin: 5px 0;
     }
 
     .footer .items .thirdItem{
-        align-items:flex-start;
+        align-items:center;
+        justify-content: center;
     }
 
     .footer .items .responsive-contact {
