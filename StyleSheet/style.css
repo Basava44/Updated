@@ -449,7 +449,6 @@ footer{
     list-style: none;
     padding: 5px;
     margin: 0 20px;
-
 }
 
 .footer .secondItem .item ul li a{
@@ -462,6 +461,21 @@ footer{
 .footer .thirdItem input{
     width: 240px;
     height: 30px;
+    border: 1px solid var(--light-gray-blue);
+    border-right: none;
+    outline: none;
+    padding: 5px 0;
+}
+
+.footer .thirdItem .searchbutton{
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--light-gray-blue);
+    background: var(--deep-tortoise);
+    color: #fff;
+    cursor: pointer;
+    margin-left: -5px;
+    border-left: none;
 }
 
 .footer .thirdItem .head{
@@ -655,7 +669,7 @@ footer{
 
     .footer .items{
         flex-direction: column;
-        align-items: left
+        align-items: center;
     }
 
     .footer .contact{
@@ -666,8 +680,10 @@ footer{
         text-align: center;
     }
 
-    .footer .items .secondItem{
-        margin: 5px 0;
+    .footer .items .secondItem .item{
+        display: flex;
+        justify-content: left;
+        font-size: 10px;
     }
 
     .footer .items .thirdItem{
@@ -677,6 +693,14 @@ footer{
 
     .footer .items .responsive-contact {
         display: block;
+    }
+
+    .footer .secondItem .item ul li{
+        margin:0;
+    }
+
+    .footer .secondItem .item ul{
+        margin: 20px 0;
     }
 
     
