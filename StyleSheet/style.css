@@ -21,8 +21,13 @@ body{
     min-width: 350px;
 }
 
-.top{
+header{
     background-color: var(--dark-blue);
+}
+
+.top{
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 .top .container {
@@ -64,11 +69,25 @@ nav img{
     margin: 10px;
 }
 
-.navbar{
+nav.navbar{
+    background-color: var(--white-one);
+}
+
+body > nav > div{
+    max-width: 1350px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--white-one);
+}
+
+.navbar div{
   background-color: var(--white-one);
   display: flex;
   justify-content: space-around;
+  
 }
+
+
 
 nav ul li a{
   color: var(--dark-blue);
@@ -105,6 +124,8 @@ nav ul li{
     padding: 15px 0;
     color: #505050;
     font-size: 14px;
+    max-width: 1340px;
+    margin: 0 auto;
 }
 
 .greeting a{
@@ -120,6 +141,11 @@ section.main{
     background-color: white;
     height: auto;
     width: 100%;
+}
+
+body > main > section.main > div{
+    max-width: 1350px;
+    margin: 0 auto;
 }
 
 section.main div:first-child{
@@ -184,9 +210,6 @@ section.main div.caution .fa.fa-close{
     height: 172px;
 }
 
-.balance{
-
-}
 
 .balance p{
     margin: 5px 0;
@@ -228,7 +251,6 @@ button a{
 section .container{
     display:flex;
     justify-content: center;
-    margin-left: 15px;
 }
 
 .container .balancequery .headings{
@@ -236,8 +258,8 @@ section .container{
     overflow-x: auto;
 }
 
-::-webkit-scrollbar{
-    background-color: transparent;
+.container .balancequery .headings::-webkit-scrollbar{
+    background: transparent;
 }
 
 .container .balancequery .headings p{
@@ -257,11 +279,11 @@ section .container{
     color: var(--deep-tortoise);
 }
 
-.container .balancequery .headings p:hover{
+/* .container .balancequery .headings p:hover{
     background-color: var(--white-one);
     border-top: 4px solid var(--deep-tortoise);
     color: var(--deep-tortoise);
-}
+} */
 
 .container .balancequery .features .maintitle{
     color: var(--deep-tortoise);
@@ -330,6 +352,8 @@ hr{
 
 .accessbuttons{
     margin-left: 6px;
+    max-width: 1335px;
+    margin: 0 auto;
 }
 
 .accessbuttons .elements{
@@ -372,7 +396,8 @@ div.accessbuttons button.active{
     padding: 10px;
     background-color: var(--white-one);
     display: flex;
-    margin: 10px 100px 10px 105px;
+    max-width: 1140px;
+    margin: 20px auto;
     justify-content: space-between;
     align-items: center;
 }
@@ -383,6 +408,7 @@ div.accessbuttons button.active{
     border: solid 0.6px #727272;
     font-size: 15px;
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .learn p{
@@ -429,36 +455,38 @@ footer{
     display: flex;
     justify-content: space-around;
     padding: 40px;
+    max-width: 1320px;
+    margin: 0 auto;
 }
 
-.footer .items .firstItem img{
+.footer .items .socialmedia img{
     height: 40px;
     width: 120px;
 }
 
-.footer .items .firstItem div{
+.footer .items .socialmedia div{
     color: var(--white-one);
     padding: 10px 0;
 }
 
-.footer .secondItem .item {
+.footer .links .item {
     display: flex;
 }
 
-.footer .secondItem .item ul li{
+.footer .links .item ul li{
     list-style: none;
     padding: 5px;
     margin: 0 20px;
 }
 
-.footer .secondItem .item ul li a{
+.footer .links .item ul li a{
     text-decoration: none;
     font-size: 12px;
     color: var(--white-one);
     font-weight: lighter;
 }
 
-.footer .thirdItem input{
+.footer .searchbar input{
     width: 240px;
     height: 30px;
     border: 1px solid var(--light-gray-blue);
@@ -467,7 +495,7 @@ footer{
     padding: 5px 0;
 }
 
-.footer .thirdItem .searchbutton{
+.footer .searchbar .searchbutton{
     width: 30px;
     height: 30px;
     border: 1px solid var(--light-gray-blue);
@@ -478,11 +506,11 @@ footer{
     border-left: none;
 }
 
-.footer .thirdItem .head{
+.footer .searchbar .head{
     color: var(--white-one);
 }
 
-.footer .thirdItem div{
+.footer .searchbar div{
     margin: 10px 0;
 }
 
@@ -498,6 +526,25 @@ footer{
     margin: 0 5px;
     color: var(--white-one);
 }
+
+footer article{
+    background-color: var(--light-gray-blue);
+    padding: 20px;
+}
+
+footer article img{
+    height: 46px; 
+    width: 162px; 
+    display: flex;
+    margin: 0 auto;
+}
+
+footer article p{
+    text-align: center;
+}
+
+
+
 
 /* @media only screen and (max-width: 880px){
     .navbar ul li{
@@ -537,7 +584,7 @@ footer{
         display: none;
       }
     
-      .navbar{
+      .navbar div{
         display: block;
       }
     
@@ -591,7 +638,7 @@ footer{
     }
     
     section .balancequery{
-        width: 326px;
+        width: calc(100% - 30px);
         margin-left: 10px;
     }
 
@@ -613,7 +660,7 @@ footer{
     }
 
     .availablebalance, .currentbalance{
-        width: 326px;
+        width: calc(100% - 30px);
         height: 140px;
         align-items: center;
         margin:15px auto;
@@ -621,6 +668,10 @@ footer{
 
     .availablebalance button{
         margin:0;
+    }
+
+    .accessbuttons{
+        margin: 0;
     }
 
     .accessbuttons .elements{
@@ -634,10 +685,9 @@ footer{
     
     .learn{
         background-color: var(--white-one);
-        margin: 10px 24px 0 29px;
         display: block;
-        height: 279px;
-        width: 326px;
+        height: auto;
+        width: calc(100% - 30px);
     }
 
     .fa.fa-angle-left, .fa.fa-angle-right{
@@ -676,33 +726,33 @@ footer{
         display: none;
     }
 
-    .footer .items .firstItem{
+    .footer .items .socialmedia{
         text-align: center;
     }
 
-    .footer .items .secondItem .item{
+    .footer .items .links .item{
         display: flex;
         justify-content: left;
         font-size: 10px;
     }
 
-    .footer .items .thirdItem{
+    .footer .items .searchbar{
         align-items:center;
         justify-content: center;
     }
 
     .footer .items .responsive-contact {
         display: block;
+        transition: 0.5s;
     }
 
-    .footer .secondItem .item ul li{
+    .footer .links .item ul li{
         margin:0;
     }
 
-    .footer .secondItem .item ul{
+    .footer .links .item ul{
         margin: 20px 0;
-    }
-
+    } 
     
 }
 
