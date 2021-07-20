@@ -134,7 +134,8 @@ nav ul li{
 }
 
 blockquote{
-    margin: 0 0 0 110px;
+    max-width: 1120px;
+    margin: 0 auto;
 }
 
 section.main{
@@ -556,7 +557,7 @@ footer article p{
 } */
 
 
-@media only screen and (max-width: 680px)  {
+@media only screen and (max-width: 767px)  {
     .top .container{
         display:flex;
         padding: 10px;
@@ -708,19 +709,8 @@ footer article p{
         font-size: 20px;        
     }
 
-
-
-
-
-
-
-
-    .footer{
-        clear: both;
-    }
-
     .footer .items{
-        flex-direction: column;
+        display: block;
         align-items: center;
     }
 
@@ -734,7 +724,6 @@ footer article p{
 
     .footer .items .links .item{
         display: flex;
-        justify-content: left;
         font-size: 10px;
     }
 
@@ -743,10 +732,16 @@ footer article p{
         justify-content: center;
     }
 
-    .footer .items .responsive-contact {
-        display: block;
-        transition: 0.5s;
+    .footer .links{
+        display: flex;
+        justify-content: center;
     }
+
+    .footer .searchbar{
+        display: flex;
+        flex-direction: column;
+    }
+    
 
     .footer .links .item ul li{
         margin:0;
@@ -758,10 +753,99 @@ footer article p{
     
 }
 
-@media only screen and (max-width: 920px)
-{
-    .navbar ul li{
+@media only screen and (max-width: 1023px) and (min-width: 768px){
+    *{
+        margin: 0;
         padding: 0;
-        margin: 0 5px;
+        box-sizing: border-box;
     }
+
+    section .container{
+        display: block;
+    }
+
+    .navigation{
+        display: none;
+      }
+
+    .navbar div{
+        display: block;
+        max-width: calc(100% - 40px);
+    }
+
+    .navbar #check{
+        display: block;
+        font-size: 30px;
+        right: 60px;
+        top: 60px;
+        color: var(--dark-blue);
+      }
+
+    .top .container{
+        right: 40px;
+    }
+    
+    blockquote{
+        max-width: calc(100% - 40px);
+        margin: 0 auto;
+        padding: 0 20px;
+        margin-left: 20px;
+    }
+
+    section.main div:first-child{
+        padding: 20px 50px;
+    }
+
+    .balance{
+        display: flex;
+        justify-content: space-around;
+        max-width: 700px;
+        margin: auto;
+    }
+
+    .currentbalance, .availablebalance{
+        padding: 30px 30px;
+        margin: 10px 10px;
+    }
+
+    .balancequery{
+        max-width: calc(100% - 90px);
+        margin: 0 auto;
+    }
+
+    .learn{
+        max-width: calc(100% - 90px);
+    }
+
+    .accessbuttons {
+       width: 100%;
+    }
+
+    .footer .items{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer .items li{
+        text-align: left;
+    }
+
+    .footer .links .item{
+        margin: 10px 10px;
+    }
+
+    .accessbuttons .elements{
+        display: block;
+    }
+
+    .accessbuttons .elements button{
+        width: calc(100% - 90px);
+    }
+
+    .accessbuttons .elements{
+        margin: 0 0;
+        text-align: center;
+    }
+
 }
