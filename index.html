@@ -188,30 +188,6 @@
         <p>© 2019 Vanguard Charitable Endowment Program. VANGUARD and the Vanguard Ship Logo are trademarks of The Vanguard Group, Inc.</p>
     </article>
     </footer>
-
-    
-
-    <script>
-        const btn = document.getElementById("btn");
-        function myfunction()
-        {
-            const x = document.getElementById("topnav");
-            if (x.className === "navigation") {
-                x.className += " responsive";
-                btn.className = "fa fa-close";
-            } else {
-                x.className = "navigation";
-                btn.className = "fa fa-bars";
-            }
-        }
-
-        const cancel = document.getElementById("fa.fa-close");
-        if(cancel)
-        cancel.addEventListener("click",function(){
-            console.log("hello");
-        })
-    </script>
-
-    
+    <script src="./script.js"></script>
 </body>
 </html>
