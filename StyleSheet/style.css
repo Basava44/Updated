@@ -675,12 +675,14 @@ footer article p{
     }
 
     .accessbuttons .elements{
-        flex-direction: column;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
         align-items: center;
     }
 
     .accessbuttons .elements button{
-        width: 325px;
+        width: calc(100% - 30px);
     }
     
     .learn{
