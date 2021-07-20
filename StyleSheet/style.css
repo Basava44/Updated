@@ -544,6 +544,14 @@ footer article p{
     text-align: center;
 }
 
+.navigation.responsive{
+    display: flex;
+    flex-direction: column;
+    line-height: 20px;
+    background-color: var(--dark-blue);
+    color: var(--white-one);
+  }  
+
 
 
 
@@ -596,14 +604,7 @@ footer article p{
         top: 80px;
         color: var(--dark-blue);
       }
-    
-      .navigation.responsive{
-        display: flex;
-        flex-direction: column;
-        line-height: 20px;
-        background-color: var(--dark-blue);
-        color: var(--white-one);
-      }    
+      
 
     .navbar ul li a{
         transition: 0.3s;
@@ -770,7 +771,10 @@ footer article p{
 
     .navbar div{
         display: block;
-        max-width: calc(100% - 40px);
+    }
+
+    .navbar ul a{
+        color: var(--white-one);
     }
 
     .navbar #check{
