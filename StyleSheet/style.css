@@ -85,7 +85,7 @@ nav.navbar{
     top: 0;
     padding: 50px;
     -webkit-animation-name: fadeIn; /* Fade in the background */
-    -webkit-animation-duration: 0.5s;
+    -webkit-animation-duration: 0.4s;
 }
 
 @-webkit-keyframes fadeIn {
@@ -224,7 +224,7 @@ section.main div p:nth-child(2){
 section.main div p:nth-child(3){
     padding: 5px 0;
     color: var(--light-gray-blue);
-    font-size: 10px;
+    font-size: 15px;
 }
 
 section.main div.caution{
@@ -240,6 +240,7 @@ section.main div.caution{
 
 section.main div.caution .fa.fa-close{
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .fa.fa-info{

@@ -34,3 +34,7 @@ function open_data(evt, dataName) {
 function close_helpsection(){
     document.getElementById("help").style.display="none";
 }
+
+function close_tab(){
+     document.querySelector(".caution").style.display="none";
+}
