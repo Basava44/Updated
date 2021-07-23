@@ -1,4 +1,5 @@
 const assistance = document.querySelector(".assistance");
+const learn = document.getElementsByClassName("learn");
 
 function myfunction()
 {
@@ -42,7 +43,6 @@ function close_tab(){
 // slide show
 
 var currentslide = 0;
-const learn = document.getElementsByClassName("learn");
 learn[currentslide].style.display ="flex";
 
 function slide(slidechange){
