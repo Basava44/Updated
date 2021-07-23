@@ -38,3 +38,28 @@ function close_helpsection(){
 function close_tab(){
      document.querySelector(".caution").style.display="none";
 }
+
+// slide show
+
+var n = 0;
+const learn = document.getElementsByClassName("learn");
+learn[n].style.display ="flex";
+
+function slide(x){
+    console.log(x, n);
+
+    for(let i=0;i<learn.length;i++)
+    {
+        learn[i].style.display = "none";
+    }
+
+    n+=x;
+    if(n==-1)
+    n=2;
+
+    if(n==3)
+    n=0;
+
+    learn[n].style.display ="flex";       
+}
+

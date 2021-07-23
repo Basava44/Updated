@@ -75,7 +75,7 @@ nav.navbar{
 
 #help{
     height: 100vh;
-    background-color: rgb(245, 241, 241);
+    background-color: var(--white-one);
     width: 50%;
     position: absolute;
     right: 0;
@@ -242,6 +242,16 @@ section.main div.caution .fa.fa-close{
     margin-right: 10px;
     cursor: pointer;
 }
+
+/* slideshow container */
+
+.slideshow_container .learn{
+    display: none;
+}
+
+
+
+/* .slideshow_containercontainer */
 
 .fa.fa-info{
     font-size: 10px;
