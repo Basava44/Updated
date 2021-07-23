@@ -46,7 +46,7 @@ const learn = document.getElementsByClassName("learn");
 learn[n].style.display ="flex";
 
 function slide(x){
-    console.log(x, n);
+    
 
     for(let i=0;i<learn.length;i++)
     {
