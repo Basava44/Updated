@@ -41,25 +41,26 @@ function close_tab(){
 
 // slide show
 
-var n = 0;
+var currentslide = 0;
 const learn = document.getElementsByClassName("learn");
-learn[n].style.display ="flex";
+learn[currentslide].style.display ="flex";
 
-function slide(x){
-    
+function slide(slidechange){
+    console.log("currentslide:",currentslide, "slidechange", slidechange);
 
     for(let i=0;i<learn.length;i++)
     {
         learn[i].style.display = "none";
     }
 
-    n+=x;
-    if(n==-1)
-    n=2;
+    currentslide +=  slidechange;
+    
+    if(currentslide==-1)
+    currentslide=2;
 
-    if(n==3)
-    n=0;
+    if(currentslide==3)
+    currentslide=0;
 
-    learn[n].style.display ="flex";       
+    learn[currentslide].style.display ="flex";       
 }
 
