@@ -84,7 +84,14 @@ nav.navbar{
     transition: 0.5s;
     top: 0;
     padding: 50px;
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.5s;
 }
+
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+  }
 
 #help h2, #help input, #help form button{
     margin: 20px 10px 20px 0;
