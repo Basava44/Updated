@@ -87,8 +87,6 @@ body > nav > div{
   
 }
 
-
-
 nav ul li a{
   color: var(--dark-blue);
   padding: 22px 0;
@@ -96,9 +94,7 @@ nav ul li a{
   transition: 0.3s;
 }
 
-nav ul li a:hover{
-    border-bottom: 4px solid var(--dark-blue);
-}
+
 
 nav .active{
     border-bottom: 4px solid var(--dark-blue);
@@ -243,7 +239,7 @@ button a{
 
 .balancequery{
     background-color: var(--white-one);
-    margin: 10px 20px;
+    margin: 10px 10px;
     height: 354px;
     width: 736px;
 }
@@ -848,8 +844,21 @@ footer article p{
     }
 
     .accessbuttons .elements{
-        margin: 0 0;
+        margin: 10px 0;
         text-align: center;
     }
 
 }
+
+@media only screen and (max-width: 1023px){
+
+    nav ul{
+        display: none;
+    }
+
+    .navbar div{
+        
+    }
+    
+}
+    
