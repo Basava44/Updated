@@ -94,6 +94,11 @@ nav.navbar{
     color: red;
 }
 
+
+
+
+
+
 #help form button{
     padding: 5px;
     font-weight: bold;
@@ -427,6 +432,10 @@ div.accessbuttons button.active{
 
 div.accessbuttons button.active{
     color: var(--deep-tortoise);
+}
+
+.container .balancequery .headings p:last-child{
+    border-right: none;
 }
 
 .accessbuttons .elements button{
