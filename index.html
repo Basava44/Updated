@@ -9,6 +9,7 @@
     <title>Dashbaord</title>
 </head>
 <body>
+    
     <header>
         <div class="top">
             <div class="container">
@@ -23,7 +24,6 @@
             </div>
         </div>
     </header>
-
         <nav class="navbar">
             <div>
             <label id="check">
@@ -43,6 +43,32 @@
         <div class="greeting">
             <blockquote>Welcome to our beta online experience. You can leave the test at any time and return to the previous version of <a href="#"> Vanguard Charitable.</a></blockquote> 
         </div>
+
+        <!-- Help Section -->
+        <div class="help" id="help">
+            <i class="fa fa-close" onclick="close_helpsection()"></i>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, tempore magnam exercitationem minus nulla, voluptate temporibus nobis nemo voluptatem molestiae cumque cum sit cupiditate vel dolorem corrupti distinctio similique incidunt.</p>
+
+            <h2>Fill the Details</h2>
+            <form action="#">
+                <label for="name">Name: <span class="required">*</span></label>
+                <input type="text" name="name" id="name" min="5" required>
+                <br>
+                <label for="email">Email: <span class="required">*</span></label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="query">Query: <span class="required">*</span></label>
+                <textarea name="query" id="query" cols="20" rows="5" minlength="10" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+                <br>
+                <span class="required">*</span>Required
+            </form>
+        </div>
+        
+
+
         <main>
         <section class="main">
         <div>
@@ -50,7 +76,7 @@
         <p>The Church Fund - A1050919</p>
         <p>Balance as of 12/12/1990</p>
         <div class="caution">
-            <p style="line-height: 24px; color: #b6bdbd; font-weight: normal;"> <i class="fa fa-warning" style="color: orangered; margin: 0 10px;" ></i>This is a <a href="#">Pending Contributions</a> on your Account that needs attentions.</p> 
+            <p style="line-height: 24px; color: #b6bdbd; font-weight: normal;"> <i class="fa fa-warning" style="color: orangered; margin: 0 10px;"></i>This is a <a href="#">Pending Contributions</a> on your Account that needs attentions.</p> 
             <i class="fa fa-close" onclick="close()" id="close"></i>
         </div>
         </div>
@@ -71,13 +97,112 @@
             </div>
             <div class="balancequery">
                 <div class="headings">
-                    <p class="grant">Grants</p>
-                    <p class="contribution">Contributions</p>
-                    <p class="exchange">Exchange</p>
-                    <p class="other">Other Transactions</p>
+                    <button class="tablinks" onclick="open_data(event,'grants')"><p>Grants</p></button>
+                    <button class="tablinks" onclick="open_data(event,'contribution')"><p>Contributions</p></button>
+                    <button class="tablinks" onclick="open_data(event,'exchange')"><p>Exchange</p></button>
+                    <button class="tablinks" onclick="open_data(event,'others')"><p>Other Transactions</p></button>
                 </div>
-                <div class="features">
-                    <p class="maintitle">Gift ID:440564</p>
+                <div class="features" id="grants">
+                    <p class="maintitle">Grants</p>
+                    <p class="info">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</p>
+                    <div class="data">
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>                        
+                    </div>
+                    <br>
+                    <hr style="clear: both;">
+                    <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
+                </div>
+                <div class="features" id="contribution">
+                    <p class="maintitle">Contribution</p>
+                    <p class="info">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</p>
+                    <div class="data">
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>                        
+                    </div>
+                    <br>
+                    <hr style="clear: both;">
+                    <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
+                </div>
+                <div class="features" id="exchange">
+                    <p class="maintitle">Exchange</p>
+                    <p class="info">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</p>
+                    <div class="data">
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>
+                        <div class="items">
+                            <p class="title">Entered Date</p>
+                            <p class="date">10/04/2019</p>
+                        </div>                        
+                    </div>
+                    <br>
+                    <hr style="clear: both;">
+                    <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
+                </div>
+                <div class="features" id="others">
+                    <p class="maintitle">Others Transactions</p>
                     <p class="info">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</p>
                     <div class="data">
                         <div class="items">

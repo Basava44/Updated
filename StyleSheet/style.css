@@ -73,6 +73,46 @@ nav.navbar{
     background-color: var(--white-one);
 }
 
+#help{
+    height: 100vh;
+    background-color: rgb(245, 241, 241);
+    width: 50%;
+    position: absolute;
+    right: 0;
+    display: none;
+    z-index: 1;
+    transition: 0.5s;
+    top: 0;
+    padding: 50px;
+}
+
+#help h2, #help input, #help form button{
+    margin: 20px 10px 20px 0;
+}
+
+.required{
+    color: red;
+}
+
+#help form button{
+    padding: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#help label{
+    font-weight: bold;
+}
+
+#help i{
+    font-size: 25px;
+    position: absolute;
+    right: 20px;
+    /* border: 1px solid var(--light-gray-blue); */
+    top: 10px;
+    padding: 5px;
+}
+
 body > nav > div{
     max-width: 1350px;
     width: 100%;
@@ -242,6 +282,27 @@ button a{
     margin: 10px 10px;
     height: 354px;
     width: 736px;
+}
+
+.features{
+    display: none;
+}
+
+.balancequery .headings button{
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+
+div.headings > button.tablinks.active > p{
+    background-color: var(--white-one);
+    color: var(--deep-tortoise);
+    font-weight: bold;
+}
+
+.balancequery .headings button:last-child{
+    overflow:auto;
 }
 
 
@@ -551,6 +612,7 @@ footer article p{
 
 
 
+
 /* @media only screen and (max-width: 880px){
     .navbar ul li{
         padding: 0;
@@ -655,6 +717,14 @@ footer article p{
         text-align: center;
         padding: 10px;
         margin: 0;
+    }
+
+    .balancequery .headings .tablinks.active{
+        margin: 10px 0;
+    }
+
+    .balancequery .headings .tablinks.active p{
+        border: none;
     }
 
     .availablebalance, .currentbalance{
