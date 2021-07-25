@@ -16,6 +16,7 @@
     --deep-tortoise: #006778;
 }
 
+
 body{
     background-color: var(--background);
     min-width: 350px;
@@ -83,18 +84,59 @@ nav.navbar{
     z-index: 1;
     transition: 0.5s;
     top: 0;
-    padding: 50px;
+    padding: 30px 80px;
+    overflow: auto;
     -webkit-animation-name: fadeIn; /* Fade in the background */
     -webkit-animation-duration: 0.4s;
 }
+
+
 
 @-webkit-keyframes fadeIn {
     from {opacity: 0} 
     to {opacity: 1}
   }
 
-#help h2, #help input, #help form button{
-    margin: 20px 10px 20px 0;
+  #help > form > button{
+      width: 70px;
+      height: 50px;
+      background-color: var(--deep-tortoise);
+      border: none;
+      color: var(--white-one);
+  }
+
+
+#help > p:nth-child(2){
+    font-size: 40px;    
+}
+
+#help > p:nth-child(4){
+    
+    font-weight: bold;
+    color: var(--deep-tortoise);
+}
+
+#help > form > p > span{
+    color: var(--deep-tortoise);
+    font-weight: bold;    
+}
+
+#help *{
+    margin: 30px 0;
+}
+
+#help > p:nth-child(3){
+    color: var(--light-gray-blue);
+}
+
+#help label{
+    font-size: 20px;
+    color: var(--light-gray-blue);
+}
+
+#help input{
+    width: 200px;
+    height: 40px;
 }
 
 .required{
@@ -146,6 +188,14 @@ nav ul li a{
   transition: 0.3s;
 }
 
+#topnav > li:nth-child(7) > a{
+    display: none;
+}
+
+.items> p:nth-child(2){
+    color: var(--deep-tortoise);
+    font-weight: bold;
+}
 
 
 nav .active{
@@ -322,6 +372,7 @@ div.headings > button.tablinks.active > p{
     background-color: var(--white-one);
     color: var(--deep-tortoise);
     font-weight: bold;
+    border-top: 4px solid var(--deep-tortoise);
 }
 
 .balancequery .headings button:last-child{
@@ -674,6 +725,11 @@ footer article p{
         font-size: 14px;
     }
 
+    #help{
+        width: 100%;
+        padding: 30px 40px;
+    }
+
     .navigation{
         display: none;
       }
@@ -700,6 +756,10 @@ footer article p{
 
     .navbar ul li a:hover{
         border-bottom: 4px solid var(--white-one);
+    }
+
+    #topnav > li:nth-child(7) > a{
+        display: block;
     }
 
     section.main div:first-child{
@@ -868,6 +928,10 @@ footer article p{
 
     .navbar ul a{
         color: var(--white-one);
+    }
+
+    #help{
+        width: 100%;
     }
 
     .navbar #check{

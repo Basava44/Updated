@@ -13,11 +13,11 @@
     <header>
         <div class="top">
             <div class="container">
-            <p class="assistance">Need Assistance?</p>
-            <select name="userid" class="userid">
-                <option value="">A1029087 - John Carson Ec…</option>
-                <option value="">A1029087 - John Carson Ec…</option>
-                <option value="">A1029087 - John Carson Ec…</option>
+            <p class="assistance" onclick="open_helpsection()">Need Assistance?</p>
+            <select name="userid" class="userid" onchange="change_userid(event)">
+                <option value="A1029087 - John Carson">A1029087 - John Carson</option>
+                <option value="G6239387 - Alex Arun">G6239387 - Alex Arun</option>
+                <option value="C1047392 - Chris Evan">C1047392 - Chris Evan</option>
             </select>
             <p class="mail"><a href="#"><i class="fa fa-envelope"></i></a></p>
             <p class="user"><a href="#"><i class="fa fa-user-circle"></i></a></p>
@@ -27,7 +27,7 @@
         <nav class="navbar">
             <div>
             <label id="check">
-                <i class="fa fa-bars" id="btn" onclick="myfunction()"></i>
+                <i class="fa fa-bars" id="btn" onclick="responsive_navbar()"></i>
             </label>
             <img src="./Assets/images/logo.png" alt="">
             <ul class="navigation" id="topnav">
@@ -37,6 +37,7 @@
                 <li><a href="#" class="">INVESTMENTS</a></li>
                 <li><a href="#" class="">RESOURCES</a></li>
                 <li><a href="#" class="">MY ACCOUNT</a></li>
+                <li onclick="open_helpsection()"><a href="#">Need Assistance?</a></li>
             </ul>
         </div>
         </nav>
@@ -47,21 +48,27 @@
         <!-- Help Section -->
         <div class="help" id="help">
             <i class="fa fa-close" onclick="close_helpsection()"></i>
+            <p>Need Assistance?</p>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, tempore magnam exercitationem minus nulla, voluptate temporibus nobis nemo voluptatem molestiae cumque cum sit cupiditate vel dolorem corrupti distinctio similique incidunt.</p>
 
-            <h2>Fill the Details</h2>
+            <p>For answers to other common questions, click here to go to our FAQ section.</p>
             <form action="#">
+
+                <p>Seeking Assistance for <span class="user_name"></span></p>
+
                 <label for="name">Name: <span class="required">*</span></label>
+                <br>
                 <input type="text" name="name" id="name" min="5" placeholder="Enter your name" required>
                 <br>
                 <label for="email">Email: <span class="required">*</span></label>
+                <br>
                 <input type="email" name="email" id="email" placeholder="Enter your Email Id" required>
                 <br>
                 <label for="query">Query: <span class="required">*</span></label>
-                <textarea name="query" id="query" cols="20" rows="5" minlength="10" placeholder="Enter your Message" required></textarea>
                 <br>
-                <button type="submit">Submit</button>
-                <button type="reset">Reset</button>
+                <textarea name="query" id="query" cols="40" rows="20" minlength="10" placeholder="Enter your Message" required></textarea>
+                <br>
+                <button type="submit">Send</button>
                 <br>
                 <span class="required">*</span>Required
             </form>
@@ -73,7 +80,7 @@
         <section class="main">
         <div>
         <h2>Account Overview</h2>
-        <p>The Church Fund - A1050919</p>
+        <p class="user_name"></p>
         <p>Balance as of 12/12/1990</p>
         <div class="caution">
             <p style="line-height: 24px; color: #b6bdbd; font-weight: normal;"> <i class="fa fa-warning" style="color: orangered; margin: 0 10px;"></i>This is a <a href="#">Pending Contributions</a> on your Account that needs attentions.</p> 
@@ -108,64 +115,64 @@
                     <div class="data">
                         <div class="items">
                             <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="EnteredDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Received Date</p>
+                            <p class="ReceivedDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Number of Shares</p>
+                            <p class="NumberofShares"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Type</p>
+                            <p class="Type"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Amount</p>
+                            <p class="Amount"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Status</p>
+                            <p class="Status"></p>
                         </div>                        
                     </div>
                     <br>
-                    <hr style="clear: both;">
+                    <hr>
                     <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
                 </div>
                 <div class="features" id="contribution">
-                    <p class="maintitle">Contribution</p>
+                    <p class="maintitle">Contributions</p>
                     <p class="info">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</p>
                     <div class="data">
                         <div class="items">
                             <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="EnteredDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Received Date</p>
+                            <p class="ReceivedDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Number of Shares</p>
+                            <p class="NumberofShares"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Type</p>
+                            <p class="Type"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Amount</p>
+                            <p class="Amount"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Status</p>
+                            <p class="Status"></p>
                         </div>                        
                     </div>
                     <br>
-                    <hr style="clear: both;">
+                    <hr>
                     <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
                 </div>
                 <div class="features" id="exchange">
@@ -174,64 +181,64 @@
                     <div class="data">
                         <div class="items">
                             <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="EnteredDate">a</p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Received Date</p>
+                            <p class="ReceivedDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Number of Shares</p>
+                            <p class="NumberofShares"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Type</p>
+                            <p class="Type"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Amount</p>
+                            <p class="Amount"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Status</p>
+                            <p class="Status"></p>
                         </div>                        
                     </div>
                     <br>
-                    <hr style="clear: both;">
+                    <hr>
                     <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
                 </div>
                 <div class="features" id="others">
-                    <p class="maintitle">Others Transactions</p>
+                    <p class="maintitle">Other Transactions</p>
                     <p class="info">Vanguard New Jersey Long-Term Tax-Exempt Fund Admiral Shares.</p>
                     <div class="data">
                         <div class="items">
                             <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="EnteredDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Received Date</p>
+                            <p class="ReceivedDate"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Number of Shares</p>
+                            <p class="NumberofShares"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Type</p>
+                            <p class="Type"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Amount</p>
+                            <p class="Amount"></p>
                         </div>
                         <div class="items">
-                            <p class="title">Entered Date</p>
-                            <p class="date">10/04/2019</p>
+                            <p class="title">Status</p>
+                            <p class="Status"></p>
                         </div>                        
                     </div>
                     <br>
-                    <hr style="clear: both;">
+                    <hr>
                     <p class="activity"><a href="#">View Contribution Activity <i class="fa fa-arrow-right"></i></a></p>
                 </div>
             </div>            
@@ -241,7 +248,7 @@
                 <button>CONTRIBUTION <i class="fa fa-arrow-right"></i></button>
                 <button>GRANT <i class="fa fa-arrow-right"></i></button>
                 <button>EXCHANGE <i class="fa fa-arrow-right"></i></button>
-                <button  class="active">MANAGE YOUR ACCOUNT <i class="fa fa-caret-down"></i></button>            
+                <button  class="active">MANAGE YOUR ACCOUNT <i class="fa fa-caret-down"></i></button>     
             </div>
         </div>
 
