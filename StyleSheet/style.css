@@ -105,6 +105,10 @@ nav.navbar{
       color: var(--white-one);
   }
 
+  #grants{
+      display: block;
+  }
+
 
 #help > p:nth-child(2){
     font-size: 40px;    
@@ -875,6 +879,7 @@ footer article p{
     .learn div.readmore{
         width: 100%;
     }
+
 
     .caution .fa.fa-close{
         right: 7%;

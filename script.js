@@ -27,6 +27,8 @@ function responsive_navbar()
     }
 }
 
+
+
 function open_data(evt, dataName) {
     const features = document.getElementsByClassName("features");
     for(let i=0;i<features.length;i++)
