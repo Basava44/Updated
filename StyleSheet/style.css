@@ -446,8 +446,16 @@ section .container{
 }
 
 .container .balancequery .features .data .items{
-    margin: 0 40px;
+    padding: 0 50px;
     display: inline-block;
+}
+
+.features .data div:nth-child(5){
+    margin: 0 -10px;
+}
+
+.features .data div:nth-child(6){
+    margin: 0 30px;
 }
 
 div.balancequery > div.features > div > div:nth-child(4){

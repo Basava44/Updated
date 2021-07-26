@@ -104,33 +104,17 @@ const info = document.querySelectorAll(".info")
 fetch("data.json")
 .then(responce => responce.json())
 .then(data =>{
-    for(let i=0; i<enteredDate.length;i++)
-    {
-        enteredDate[i].innerHTML = data.EnteredDate;
-    }
-    for(let i=0; i<receivedDate.length;i++)
-    {
-        receivedDate[i].innerHTML = data.ReceivedDate;
-    }
-    for(let i=0; i<numberOfShares.length;i++)
-    {
-        numberOfShares[i].innerHTML = data.NumberofShares;
-    }
-    for(let i=0; i<type.length;i++)
-    {
-        type[i].innerHTML = data.Type;
-    }
-    for(let i=0; i<amount.length;i++)
-    {
-        amount[i].innerHTML = data.Amount;
-    }
-    for(let i=0; i<status.length;i++)
-    {
-        status[i].innerHTML = data.Status;
-    }
-    for(let i=0; i<info.length;i++)
-    {
-        info[i].innerHTML = data.info;
+    for(let x in Features){
+        var value = Features[x].firstElementChild.innerHTML;
+        // console.log(data[value]);
+
+        // console.log(data[value].EnteredDate);
+            enteredDate[x].innerHTML = data[value].EnteredDate;
+            receivedDate[x].innerHTML = data[value].ReceivedDate;
+            numberOfShares[x].innerHTML = data[value].NumberofShares;
+            type[x].innerHTML = data[value].Type;
+            amount[x].innerHTML = data[value].Amount;
+            status[x].innerHTML = data[value].Status;
+            info[x].innerHTML = data[value].info;
     }
 })
-
