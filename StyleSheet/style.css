@@ -185,7 +185,6 @@ nav ul li a{
   color: var(--dark-blue);
   padding: 22px 0;
   font-weight: bold;
-  transition: 0.3s;
 }
 
 #topnav > li:nth-child(7) > a{
@@ -401,8 +400,7 @@ section .container{
     color: #505050;
     font-weight: bold;
     border: 1px solid #d9d9d9;
-    border-bottom: none;
-    transition: 0.3s;    
+    border-bottom: none;  
 }
 
 .container .balancequery .headings #active{
@@ -521,7 +519,7 @@ div.accessbuttons button.active{
     margin: 5px;
     height: 50px;
     width: 270px;
-    transition: 0.3s;
+    
 }
 
 .accessbuttons .elements button:hover{
@@ -756,7 +754,6 @@ footer article p{
       
 
     .navbar ul li a{
-        transition: 0.3s;
         padding: 0;
         color: var(--white-one);
         line-height: 40px;
@@ -803,8 +800,21 @@ footer article p{
         
     }
 
+    .container .balancequery .features .data .items
+    {
+        margin: 0;
+    }
+
+    .features .data div:nth-child(5){
+        margin: 0;
+    }
+    
+    .features .data div:nth-child(6){
+        margin: 0;
+    }
+
     .container .balancequery .features .data .items{
-        margin: 0 20px;
+        margin: 0 10px;
     }
 
 
